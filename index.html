@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saisuktam – Pearls &amp; Pearl Necklaces</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f2f6;--surface:#ffffff;--ink:#12283a;--muted:#5c6b78;--line:#dcd8e2;--gold:#a8844f;--deep:#12283a;--on-deep:#f4f2f6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a26;--surface:#142435;--ink:#eeeaf2;--muted:#a3b0bc;--line:#26394b;--gold:#c9a76e;--deep:#091420;--on-deep:#eeeaf2}}
+:root[data-theme="dark"]{--bg:#0d1a26;--surface:#142435;--ink:#eeeaf2;--muted:#a3b0bc;--line:#26394b;--gold:#c9a76e;--deep:#091420;--on-deep:#eeeaf2}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Jost,system-ui,sans-serif;font-weight:300;line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.1;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand span{font-family:"Cormorant Garamond",Georgia,serif;font-size:26px;font-weight:600;letter-spacing:.04em}
+nav{display:flex;gap:24px;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{padding:64px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(42px,6.5vw,76px);letter-spacing:-.01em}
+.hero p{max-width:44ch;color:var(--muted);margin:22px 0 30px;font-size:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;background:var(--deep);color:var(--on-deep);text-decoration:none;font-weight:400;border:1px solid var(--deep)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink);margin-left:8px}
+.bigpearl{width:min(100%,380px);aspect-ratio:1;border-radius:50%;margin:0 auto;position:relative;
+background:radial-gradient(circle at 34% 28%,#fff 0 6%,rgba(255,255,255,.0) 22%),
+radial-gradient(circle at 70% 78%,rgba(190,170,215,.55),transparent 45%),
+radial-gradient(circle at 25% 75%,rgba(160,215,215,.45),transparent 40%),
+radial-gradient(circle at 50% 50%,#f7f3f2,#d9d2d8 70%,#b7aebb);
+box-shadow:0 40px 60px -30px rgba(18,40,58,.45),inset -14px -18px 36px rgba(110,95,125,.28);animation:sheen 9s ease-in-out infinite alternate}
+@keyframes sheen{from{filter:hue-rotate(0)}to{filter:hue-rotate(25deg)}}
+@media (prefers-reduced-motion:reduce){.bigpearl{animation:none}}
+section{padding:68px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+.head h2{font-size:clamp(32px,4.5vw,48px)}
+.tabs{display:flex;gap:8px}
+.tabs button{font:inherit;font-size:15px;padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--deep);color:var(--on-deep);border-color:var(--deep)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.card .art{background:linear-gradient(180deg,var(--bg),var(--surface));display:grid;place-items:center;height:200px;padding:14px}
+.card .art svg{width:100%;height:100%}
+.card .body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:24px}
+.card .meta{color:var(--muted);font-size:14.5px}
+.card .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px}
+.price{font-family:"Cormorant Garamond",Georgia,serif;font-size:24px;color:var(--gold);font-weight:600}
+.card a.enq{font-size:14.5px;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:1px}
+.about{background:var(--deep);color:var(--on-deep)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about h2{font-size:clamp(32px,4.5vw,48px)}
+.about p{color:rgba(244,242,246,.78);margin:0 0 16px}
+.contact .box{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.contact .item{border-top:2px solid var(--gold);padding-top:14px}
+.contact .item small{display:block;color:var(--muted);font-size:14px}
+.contact .item a{font-family:"Cormorant Garamond",Georgia,serif;font-size:26px;text-decoration:none;word-break:break-word}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sr{position:absolute;width:0;height:0;overflow:hidden}
+@media (max-width:760px){.hero .wrap,.about .wrap{grid-template-columns:1fr}.bigpearl{width:240px;order:-1}nav{gap:16px}.hero{padding-top:36px}.btn.ghost{margin:10px 0 0}}
+</style>
+</head>
+<body>
+<svg class="sr" aria-hidden="true" focusable="false"><defs>
+<radialGradient id="g-white" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".35" stop-color="#f6f1f0"/><stop offset=".8" stop-color="#d6cdd4"/><stop offset="1" stop-color="#b5abb9"/></radialGradient>
+<radialGradient id="g-rose" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".35" stop-color="#f6dcd9"/><stop offset=".8" stop-color="#d9aaa8"/><stop offset="1" stop-color="#b98587"/></radialGradient>
+<radialGradient id="g-gold" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fffbe9"/><stop offset=".35" stop-color="#efdca7"/><stop offset=".8" stop-color="#c9a965"/><stop offset="1" stop-color="#9c7d3f"/></radialGradient>
+<radialGradient id="g-black" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#9fb4c0"/><stop offset=".3" stop-color="#4d5f6c"/><stop offset=".8" stop-color="#1b2631"/><stop offset="1" stop-color="#0b1119"/></radialGradient>
+<radialGradient id="g-logo" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="#efe8ee"/><stop offset="1" stop-color="#b9aebe"/></radialGradient>
+<linearGradient id="g-irid" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fe0dc" stop-opacity=".4"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#e9a3d6" stop-opacity=".45"/></linearGradient>
+</defs></svg>
+
+<header><div class="wrap">
+<a class="brand" href="#top" aria-label="Saisuktam home">
+<svg width="44" height="44" viewBox="0 0 80 80" role="img" aria-label="Saisuktam logo">
+<circle cx="40" cy="40" r="38" fill="none" stroke="#a8844f" stroke-width="1.5"/>
+<path d="M16 44 Q40 74 64 44 Q40 54 16 44Z" fill="#12283a"/>
+<path d="M40 52 L40 66 M30 50 L26 62 M50 50 L54 62" stroke="#a8844f" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+<circle cx="40" cy="33" r="14" fill="url(#g-logo)"/>
+<ellipse cx="35" cy="28" rx="4" ry="2.6" fill="#fff" opacity=".9" transform="rotate(-30 35 28)"/>
+</svg><span>Saisuktam</span></a>
+<nav><a href="#collection">Collection</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Pearls chosen one by one.</h1>
+<p>Saisuktam brings you lustrous pearls and hand-strung pearl necklaces, each checked for shine, shape and surface before it reaches you.</p>
+<a class="btn" href="#collection">Shop the collection</a><a class="btn ghost" href="#contact">Contact us</a>
+</div>
+<div class="bigpearl" role="img" aria-label="A lustrous pearl"></div>
+</div></div>
+
+<section id="collection"><div class="wrap">
+<div class="head"><h2>The collection</h2>
+<div class="tabs" role="group" aria-label="Filter products">
+<button aria-pressed="true" data-f="all">All</button><button aria-pressed="false" data-f="necklace">Necklaces</button><button aria-pressed="false" data-f="pearl">Loose pearls</button></div></div>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+<h2>Why Saisuktam</h2>
+<div>
+<p>Every pearl we sell is picked by hand. We look at luster first, then roundness, then skin: the smoother and brighter, the better the pearl.</p>
+<p>Our necklaces are strung with a knot between each pearl, so they sit well and stay safe if a strand ever breaks.</p>
+<p>Not sure what suits you? Message us with the occasion and your budget and we will suggest a few pieces.</p>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<div class="head"><h2>Get in touch</h2></div>
+<div class="box">
+<div class="item"><small>Email</small><a href="mailto:saisuktam@gmail.com">saisuktam@gmail.com</a></div>
+<div class="item"><small>Phone</small><a href="tel:+918287052058">+91 82870 52058</a></div>
+<div class="item"><small>WhatsApp</small><a href="https://wa.me/918287052058?text=Hello%20Saisuktam%2C%20I%20would%20like%20to%20know%20more%20about%20your%20pearls." target="_blank" rel="noopener">Message us</a></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Saisuktam. All rights reserved.</span><span>saisuktam@gmail.com · +91 82870 52058</span></div></footer>
+
+<script>
+var P=[
+{n:"Classic Akoya Strand",t:"necklace",c:"white",m:"7 mm pearls, 18 inch, silver clasp",p:"₹12,500",s:"u"},
+{n:"Rose Graduated Necklace",t:"necklace",c:"rose",m:"5 to 9 mm pearls, 20 inch",p:"₹9,800",s:"g"},
+{n:"Golden South Sea Choker",t:"necklace",c:"gold",m:"8 mm pearls, 16 inch",p:"₹18,900",s:"u"},
+{n:"Black Tahitian Strand",t:"necklace",c:"black",m:"9 mm pearls, 18 inch",p:"₹21,000",s:"g"},
+{n:"White Round Pearl",t:"pearl",c:"white",m:"Loose, 8 mm, high luster",p:"₹1,800",s:"1"},
+{n:"Rose Freshwater Pearl",t:"pearl",c:"rose",m:"Loose, 7 mm, soft pink",p:"₹1,200",s:"1"},
+{n:"Golden Pearl",t:"pearl",c:"gold",m:"Loose, 10 mm, champagne tone",p:"₹3,400",s:"1"},
+{n:"Black Pearl",t:"pearl",c:"black",m:"Loose, 9 mm, peacock sheen",p:"₹2,900",s:"1"}];
+function art(x){
+ var o='<svg viewBox="0 0 200 160" role="img" aria-label="'+x.n+'">',f='url(#g-'+x.c+')';
+ if(x.s=="1"){o+='<ellipse cx="100" cy="140" rx="34" ry="5" fill="#000" opacity=".12"/><circle cx="100" cy="82" r="50" fill="'+f+'"/><circle cx="100" cy="82" r="50" fill="url(#g-irid)"/><ellipse cx="120" cy="112" rx="14" ry="6" fill="#fff" opacity=".25" transform="rotate(-35 120 112)"/><ellipse cx="82" cy="58" rx="13" ry="8" fill="#fff" opacity=".75" transform="rotate(-35 82 58)"/>';}
+ else{var n=x.s=="g"?27:25;for(var i=0;i<n;i++){var t=i/(n-1),u=2*t-1,X=14+172*t,Y=14+108*(1-u*u),r=x.s=="g"?5+5*(1-Math.abs(u)):7.5;
+  o+='<circle cx="'+X.toFixed(1)+'" cy="'+Y.toFixed(1)+'" r="'+r.toFixed(1)+'" fill="'+f+'"/><circle cx="'+X.toFixed(1)+'" cy="'+Y.toFixed(1)+'" r="'+r.toFixed(1)+'" fill="url(#g-irid)"/><circle cx="'+(X-r*.3).toFixed(1)+'" cy="'+(Y-r*.35).toFixed(1)+'" r="'+(r*.2).toFixed(1)+'" fill="#fff" opacity=".8"/>';}}
+ return o+'</svg>';}
+function show(f){
+ var h='';P.forEach(function(x){if(f!="all"&&x.t!=f)return;
+ var q=encodeURIComponent("Hello Saisuktam, I am interested in the "+x.n+" ("+x.p+").");
+ h+='<article class="card"><div class="art">'+art(x)+'</div><div class="body"><h3>'+x.n+'</h3><div class="meta">'+x.m+'</div><div class="row"><span class="price">'+x.p+'</span><a class="enq" href="https://wa.me/918287052058?text='+q+'" target="_blank" rel="noopener">Enquire</a></div></div></article>';});
+ document.getElementById("grid").innerHTML=h;}
+document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){
+ document.querySelectorAll(".tabs button").forEach(function(c){c.setAttribute("aria-pressed",c===b)});show(b.dataset.f);};});
+show("all");
+</script>
+</body>
+</html>
